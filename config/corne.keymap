@@ -15,31 +15,37 @@
         Esc {
             bindings = <&kp ESC>;
             key-positions = <1 2>;
-            layers = <0 1 2>;
+            layers = <0>;
         };
 
         Tab {
             bindings = <&kp TAB>;
             key-positions = <13 14>;
-            layers = <0 1 2>;
-        };
-
-        Delete {
-            bindings = <&kp DEL>;
-            key-positions = <10 9>;
-            layers = <0 2 1>;
-        };
-
-        atl_ctrl_del {
-            bindings = <&kp LA(LC(DEL))>;
-            key-positions = <33 32>;
-            layers = <2>;
+            layers = <0>;
         };
 
         bt_clr_profile {
             bindings = <&bt BT_CLR>;
             key-positions = <5 6>;
             layers = <3>;
+        };
+
+        Caps_Lock {
+            bindings = <&kp CAPS>;
+            key-positions = <25 26>;
+            layers = <0>;
+        };
+
+        Repeat_L {
+            bindings = <&key_repeat>;
+            key-positions = <38 37>;
+            layers = <0>;
+        };
+
+        Repeat_R {
+            bindings = <&key_repeat>;
+            key-positions = <39 40>;
+            layers = <0>;
         };
     };
 
@@ -54,10 +60,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W  &kp E  &kp R               &kp T            &kp Y      &kp U                   &kp I      &kp O    &kp P            &none
-&none  &kp A  &kp S  &kp D  &kp F               &kp G            &kp H      &kp J                   &kp K      &kp L    &kp RIGHT_SHIFT  &none
-&none  &kp Z  &kp X  &kp C  &kp V               &kp B            &kp N      &kp M                   &kp COMMA  &kp DOT  &kp RET          &none
-                     &mo 1  &mt LCTRL LEFT_GUI  &kp BACKSPACE    &kp SPACE  &mt LEFT_ALT RIGHT_GUI  &mo 2
+&none  &kp Q  &kp W  &kp F  &kp P         &kp B            &kp J      &kp L           &kp U             &kp Y         &kp DELETE  &none
+&none  &kp A  &kp R  &kp S  &kp T         &kp G            &kp M      &kp N           &kp E             &kp I         &kp O       &none
+&none  &kp Z  &kp X  &kp C  &kp D         &kp V            &kp K      &kp H           &kp LEFT_CONTROL  &kp LEFT_ALT  &kp RET     &none
+                     &mo 1  &kp LEFT_GUI  &kp BACKSPACE    &kp SPACE  &kp LEFT_SHIFT  &mo 2
             >;
         };
 
@@ -69,10 +75,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &none     &kp UP_ARROW  &none      &kp HOME   &kp PG_UP       &kp N7  &kp N8  &kp N9  &kp MINUS  &kp PLUS        &none
-&none  &kp LEFT  &kp DOWN      &kp RIGHT  &kp END    &kp PG_DN       &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp LEFT_SHIFT  &none
-&none  &none     &none         &none      &kp LCTRL  &kp LEFT_ALT    &kp N1  &kp N2  &kp N3  &kp DOT    &trans          &none
-                               &trans     &none      &trans          &trans  &kp N0  &none
+&none  &kp HOME  &kp UP_ARROW  &kp END    &kp PG_UP  &kp INS            &kp N7  &kp N8          &kp N9  &kp N0   &kp PLUS  &none
+&none  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PG_DN  &kp PRINTSCREEN    &kp N4  &kp N5          &kp N6  &none    &none     &none
+&none  &none     &none         &none      &kp LCTRL  &kp LEFT_ALT       &kp N1  &kp N2          &kp N3  &kp DOT  &trans    &none
+                               &trans     &none      &trans             &trans  &kp LEFT_SHIFT  &trans
             >;
         };
 
@@ -84,19 +90,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp EXCL   &kp AT             &kp HASH       &kp DLLR          &kp PRCNT       &kp CARET  &kp AMPS   &kp ASTERISK      &kp LPAR           &kp RPAR  &none
-&none  &kp COLON  &kp DOUBLE_QUOTES  &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION    &kp UNDER  &kp PLUS   &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp BSLH  &none
-&none  &kp SEMI   &kp SINGLE_QUOTE   &kp COMMA      &kp PERIOD        &kp SLASH       &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans    &none
-                                     &trans         &kp LEFT_SHIFT    &trans          &trans     &kp PIPE   &trans
+&none  &kp TILDE          &kp UNDER  &kp PLUS   &kp LEFT_BRACE    &kp RIGHT_BRACE      &kp AMPS    &kp ASTRK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE      &none
+&none  &kp DOUBLE_QUOTES  &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &kp DOLLAR  &kp PERCENT  &kp CARET             &kp RIGHT_BRACE        &kp PIPE       &none
+&none  &kp SINGLE_QUOTE   &kp SEMI   &kp COLON  &kp LESS_THAN     &kp GREATER_THAN     &kp EXCL    &kp AT       &kp HASH              &kp SLASH              &kp BACKSLASH  &none
+                                     &trans     &kp COMMA         &trans               &trans      &kp PERIOD   &trans
             >;
         };
 
         layer3 {
             bindings = <
-&none  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6  &kp F7  &kp F8  &kp F9      &kp F10  &none
-&none  &none         &none         &none         &none         &none           &none   &none   &none   &kp F11     &kp F12  &none
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none   &none   &none   &bt BT_CLR  &trans   &none
-                                   &trans        &none         &trans          &trans  &none   &trans
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4    &kp F7  &kp F8  &kp F9  &kp F10  &none  &none
+&none  &none         &none         &kp LEFT_SHIFT  &none         &none           &kp F4  &kp F5  &kp F6  &kp F11  &none  &none
+&none  &none         &none         &kp LCTRL       &kp LEFT_ALT  &none           &kp F1  &kp F2  &kp F3  &kp F12  &none  &none
+                                   &trans          &none         &trans          &trans  &none   &trans
             >;
         };
     };
