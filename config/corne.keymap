@@ -6,8 +6,10 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     combos {
@@ -61,9 +63,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W  &kp F  &kp P         &kp B            &kp J      &kp L           &kp U             &kp Y         &kp DELETE  &none
-&none  &kp A  &kp R  &kp S  &kp T         &kp G            &kp M      &kp N           &kp E             &kp I         &kp O       &none
-&none  &kp Z  &kp X  &kp C  &kp D         &kp V            &kp K      &kp H           &kp LEFT_CONTROL  &kp LEFT_ALT  &kp RET     &none
+&none  &kp Q  &kp W  &kp F  &kp P         &kp B            &kp J      &kp L           &kp U            &kp Y                &kp DELETE  &none
+&none  &kp A  &kp R  &kp S  &kp T         &kp G            &kp M      &kp N           &kp E            &kp I                &kp O       &none
+&none  &kp Z  &kp X  &kp C  &kp D         &kp V            &kp K      &kp H           &mt LCTRL COMMA  &mt LEFT_ALT PERIOD  &kp RET     &none
                      &mo 1  &kp LEFT_GUI  &kp BACKSPACE    &kp SPACE  &kp LEFT_SHIFT  &mo 2
             >;
         };
@@ -100,10 +102,19 @@
 
         middle {
             bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4    &kp F7  &kp F8  &kp F9  &kp F10  &none  &none
-&none  &none         &none             &kp LEFT_SHIFT  &none         &none           &kp F4  &kp F5  &kp F6  &kp F11  &none  &none
-&none  &none         &kp LEFT_CONTROL  &none           &kp LEFT_ALT  &none           &kp F1  &kp F2  &kp F3  &kp F12  &none  &none
-                                       &trans          &none         &trans          &trans  &none   &trans
+&none  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3   &bt BT_SEL 4     &kp F7  &kp F8  &kp F9  &kp F10  &none  &none
+&none  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2   &bt BT_DISC 3  &bt BT_DISC 4    &kp F4  &kp F5  &kp F6  &kp F11  &none  &none
+&none  &sl 4          &kp LEFT_ALT   &kp LEFT_SHIFT  &kp LCTRL      &none            &kp F1  &kp F2  &kp F3  &kp F12  &none  &none
+                                     &trans          &none          &trans           &trans  &none   &trans
+            >;
+        };
+
+        sticky {
+            bindings = <
+&none  &bootloader  &none  &none  &none  &out OUT_BLE        &out OUT_USB       &none  &none  &none  &sys_reset  &none
+&none  &none        &none  &none  &none  &ext_power EP_ON    &ext_power EP_OFF  &none  &none  &none  &none       &none
+&none  &none        &none  &none  &none  &none               &none              &none  &none  &none  &none       &none
+                           &none  &none  &none               &none              &none  &none
             >;
         };
     };
