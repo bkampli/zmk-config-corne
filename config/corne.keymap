@@ -94,7 +94,7 @@
 &none  &kp TILDE2         &kp UNDER  &kp PLUS   &kp LEFT_BRACE    &kp RIGHT_BRACE      &kp AMPS    &kp ASTRK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE      &none
 &none  &kp DOUBLE_QUOTES  &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &kp DOLLAR  &kp PERCENT     &kp CARET             &kp QUESTION           &kp PIPE       &none
 &none  &kp SINGLE_QUOTE   &kp SEMI   &kp COLON  &kp LESS_THAN     &kp GREATER_THAN     &kp EXCL    &kp AT          &kp HASH              &kp SLASH              &kp BACKSLASH  &none
-                                     &trans     &kp COMMA         &trans               &trans      &kp LEFT_SHIFT  &trans
+                                     &trans     &kp LCTRL         &trans               &trans      &kp LEFT_SHIFT  &trans
             >;
         };
 
