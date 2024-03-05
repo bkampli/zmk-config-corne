@@ -3,14 +3,13 @@
  *
  * SPDX-License-Identifier: MIT
  */
+// Customizations
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/keys.h>
-
-// Customizations
-#include <dt-bindings/zmk/outputs.h> 
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     combos {
@@ -18,13 +17,13 @@
 
         Esc {
             bindings = <&kp ESC>;
-            key-positions = <1 2>;
+            key-positions = <2 3>;
             layers = <0>;
         };
 
         Tab {
             bindings = <&kp TAB>;
-            key-positions = <13 14>;
+            key-positions = <14 15>;
             layers = <0>;
         };
 
@@ -40,15 +39,9 @@
             layers = <0>;
         };
 
-        Repeat_L {
+        Repeat {
             bindings = <&key_repeat>;
-            key-positions = <38 37>;
-            layers = <0>;
-        };
-
-        Repeat_R {
-            bindings = <&key_repeat>;
-            key-positions = <39 40>;
+            key-positions = <38 39>;
             layers = <0>;
         };
 
@@ -56,6 +49,18 @@
             bindings = <&kp DEL>;
             key-positions = <9 8>;
             layers = <0 1 2 3>;
+        };
+
+        USB_Output {
+            bindings = <&out OUT_USB>;
+            key-positions = <17 18>;
+            layers = <3>;
+        };
+
+        BLE_Output {
+            bindings = <&out OUT_BLE>;
+            key-positions = <29 30>;
+            layers = <3>;
         };
     };
 
