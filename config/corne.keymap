@@ -51,7 +51,7 @@
 
         Delete {
             bindings = <&kp DEL>;
-            key-positions = <10 9>;
+            key-positions = <9 8>;
             layers = <0 1 2 3>;
         };
     };
@@ -82,10 +82,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp HOME  &kp UP_ARROW  &kp END    &kp PG_UP  &kp INS            &kp N7  &kp N8          &kp N9  &kp N0   &kp PLUS  &none
-&none  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PG_DN  &kp PRINTSCREEN    &kp N4  &kp N5          &kp N6  &none    &none     &none
-&none  &none     &none         &none      &kp LCTRL  &kp LEFT_ALT       &kp N1  &kp N2          &kp N3  &kp DOT  &trans    &none
-                               &trans     &none      &trans             &trans  &kp LEFT_SHIFT  &trans
+&none  &kp INS          &kp HOME  &kp UP    &kp END    &kp PAGE_UP      &kp N7  &kp N8  &kp N9  &kp N0   &trans  &none
+&none  &kp PRINTSCREEN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN    &kp N4  &kp N5  &kp N6  &none    &none   &none
+&none  &none            &none     &none     &kp LCTRL  &kp LEFT_ALT     &kp N1  &kp N2  &kp N3  &kp DOT  &trans  &none
+                                  &trans    &trans     &trans           &trans  &trans  &trans
             >;
         };
 
@@ -97,10 +97,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp TILDE2         &kp UNDER  &kp PLUS   &kp LEFT_BRACE    &kp RIGHT_BRACE      &kp AMPS    &kp ASTRK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE      &none
-&none  &kp DOUBLE_QUOTES  &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &kp DOLLAR  &kp PERCENT     &kp CARET             &kp QUESTION           &kp PIPE       &none
-&none  &kp SINGLE_QUOTE   &kp SEMI   &kp COLON  &kp LESS_THAN     &kp GREATER_THAN     &kp EXCL    &kp AT          &kp HASH              &kp SLASH              &kp BACKSLASH  &none
-                                     &trans     &kp LCTRL         &trans               &trans      &kp LEFT_SHIFT  &trans
+&none  &kp TILDE2  &kp UNDER      &kp PLUS   &kp LEFT_BRACE    &kp RIGHT_BRACE      &kp AMPS    &kp ASTRK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE  &none
+&none  &kp GRAVE   &kp MINUS      &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &kp DOLLAR  &kp PERCENT     &kp CARET             &kp QUESTION           &kp COLON  &none
+&none  &kp PIPE    &kp BACKSLASH  &none      &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES    &kp EXCL    &kp AT          &kp HASH              &kp SLASH              &kp SEMI   &none
+                                  &trans     &kp LCTRL         &trans               &trans      &kp LEFT_SHIFT  &trans
             >;
         };
 
