@@ -34,12 +34,6 @@
             layers = <3>;
         };
 
-        Repeat {
-            bindings = <&key_repeat>;
-            key-positions = <40 37>;
-            layers = <0>;
-        };
-
         Delete {
             bindings = <&kp DEL>;
             key-positions = <9 8>;
@@ -87,6 +81,18 @@
             key-positions = <26 27>;
             layers = <0>;
         };
+
+        RCtrl {
+            bindings = <&kp RCTRL>;
+            key-positions = <33 32>;
+            layers = <0>;
+        };
+
+        RAlt {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <32 31>;
+            layers = <0>;
+        };
     };
 
     behaviors {
@@ -131,9 +137,9 @@
 
         base {
             bindings = <
-&none  &kp Q  &kp W  &kp F  &kp P         &kp B        &kp J      &kp L            &kp U               &kp Y                    &kp BACKSPACE  &none
-&none  &kp A  &kp R  &kp S  &kp T         &kp G        &kp M      &kp N            &kp E               &kp I                    &kp O          &none
-&none  &kp Z  &kp X  &kp C  &kp D         &kp V        &kp K      &kp H            &mt LEFT_ALT COMMA  &mt LEFT_CONTROL PERIOD  &kp RET        &none
+&none  &kp Q  &kp W  &kp F  &kp P         &kp B        &kp J      &kp L            &kp U      &kp Y       &kp BACKSPACE  &none
+&none  &kp A  &kp R  &kp S  &kp T         &kp G        &kp M      &kp N            &kp E      &kp I       &kp O          &none
+&none  &kp Z  &kp X  &kp C  &kp D         &kp V        &kp K      &kp H            &kp COMMA  &kp PERIOD  &kp RET        &none
                      &mo 1  &kp LEFT_GUI  &kp SPACE    &kp SPACE  &kp RIGHT_SHIFT  &mo 2
             >;
         };
